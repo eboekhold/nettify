@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "Taskr.Client": {
+    "TaskrClient": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Taskr.Client:build:production"
+              "buildTarget": "TaskrClient:build:production"
             },
             "development": {
-              "buildTarget": "Taskr.Client:build:development"
+              "buildTarget": "TaskrClient:build:development"
             }
           },
           "defaultConfiguration": "development",

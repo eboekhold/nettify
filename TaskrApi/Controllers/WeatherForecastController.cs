@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Taskr.Api.Controllers;
+namespace TaskrApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

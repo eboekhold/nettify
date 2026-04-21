@@ -24,5 +24,5 @@ export class App implements OnInit {
       .subscribe(data => this.forecasts.set(data));
   }
 
-  protected readonly title = signal('Taskr.Client');
+  protected readonly title = signal('TaskrClient');
 }

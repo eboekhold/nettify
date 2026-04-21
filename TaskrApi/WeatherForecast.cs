@@ -1,4 +1,4 @@
-namespace Taskr.Api;
+namespace TaskrApi;
 
 public class WeatherForecast
 {

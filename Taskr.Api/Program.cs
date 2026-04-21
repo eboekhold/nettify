@@ -1,6 +1,17 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Taskr.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+    options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -29,6 +40,7 @@ app.UseHttpsRedirection();
 
 app.UseCors();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

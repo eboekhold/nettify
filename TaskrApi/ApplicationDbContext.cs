@@ -9,5 +9,6 @@ namespace Taskr.Data
       : base(options)
     {
     }
+    public DbSet<TaskrApi.Models.Task> Tasks { get; set; } = null!;
   }
 }

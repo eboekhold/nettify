@@ -1,25 +1,23 @@
-<h1>Weather Forecast</h1>
-@if (forecasts().length > 0) {
+<h1>Tasks</h1>
+@if (tasks().length > 0) {
 <table>
   <thead>
     <tr>
-      <th>Date</th>
-      <th>Temp (C)</th>
-      <th>Temp (F)</th>
-      <th>Summary</th>
+      <th>Name</th>
+      <th>Is Complete</th>
     </tr>
   </thead>
   <tbody>
-    @for (f of forecasts(); track f.date) {
+    @for (f of tasks(); track f.id) {
     <tr>
-      <td>{{ f.date }}</td>
-      <td>{{ f.temperatureC }}</td>
-      <td>{{ f.temperatureF }}</td>
-      <td>{{ f.summary }}</td>
+      <td>{{ f.name }}</td>
+      <td>{{ f.isComplete }}</td>
     </tr>
     }
   </tbody>
 </table>
+} @else {
+<p>Loading Tasks... (or no tasks found)</p>
 }
 
 <router-outlet />

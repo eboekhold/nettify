@@ -7,11 +7,8 @@
     </tr>
   </thead>
   <tbody>
-    @for (f of tasks(); track f.id) {
-    <tr>
-      <td>{{ f.name }}</td>
-      <td>{{ f.isComplete }}</td>
-    </tr>
+    @for (task of tasks(); track task.id) {
+    <tr task-item [task]="task"></tr>
     }
   </tbody>
 </table>

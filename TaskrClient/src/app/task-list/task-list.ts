@@ -2,7 +2,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TaskItem } from '../task-item/task-item';
 
-interface Task {
+export interface Task {
   id: number;
   name: string;
   isComplete: boolean;

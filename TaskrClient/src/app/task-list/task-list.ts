@@ -1,5 +1,6 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { TaskItem } from '../task-item/task-item';
 
 interface Task {
   id: number;
@@ -8,12 +9,12 @@ interface Task {
 }
 
 @Component({
-  selector: 'app-tasks',
-  imports: [],
-  templateUrl: './tasks.html',
-  styleUrl: './tasks.scss',
+  selector: 'task-list',
+  imports: [TaskItem],
+  templateUrl: './task-list.html',
+  styleUrl: './task-list.scss',
 })
-export class Tasks implements OnInit {
+export class TaskList implements OnInit {
   private http = inject(HttpClient);
   tasks = signal<Task[]>([]);
 

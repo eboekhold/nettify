@@ -1,6 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+export interface Task {
+  id: number;
+  name: string;
+  isComplete: boolean;
+}
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],

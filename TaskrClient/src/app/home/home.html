@@ -1,1 +1,6 @@
-<p>home works!</p>
+@if (task != null) {
+<h1>{{ task()?.name }}</h1>
+<p>Complete: {{ task()?.isComplete }}</p>
+} @else {
+<p>Loading Task (or no tasks found)</p>
+}

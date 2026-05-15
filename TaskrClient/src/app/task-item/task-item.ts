@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
+import { Task } from '../app';
 
-import { Task } from '../task-list/task-list';
 
 @Component({
   selector: 'tr[task-item]',
